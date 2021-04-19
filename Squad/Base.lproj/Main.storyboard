@@ -109,7 +109,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Warning: this app is in very early development!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fcb-L9-RRr">
-                                <rect key="frame" x="36" y="825.5" width="342" height="21.5"/>
+                                <rect key="frame" x="30" y="827" width="354" height="20"/>
                                 <fontDescription key="fontDescription" name="SourceSansPro-SemiBold" family="Source Sans Pro" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <color key="highlightedColor" name="AppMediumBlue"/>
