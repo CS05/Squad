@@ -15,9 +15,20 @@ class LandingViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
     
+    let rememberPassword = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        if rememberPassword {
+            let defaults = UserDefaults.standard
+            if let email = defaults.string(forKey: "email"){
+                emailField.text = email
+            }
+            if let password = defaults.string(forKey: "password"){
+                passwordField.text = password
+            }
+        }
     }
 
     @IBAction func registerPressed(_ sender: Any) {
@@ -25,8 +36,12 @@ class LandingViewController: UIViewController {
             errorLabel.text = "Must enter password or email"
         }
         else {
+            let defaults = UserDefaults.standard
             let email = emailField.text!
             let password = passwordField.text!
+            
+            defaults.set(email, forKey: "email")
+            defaults.set(password, forKey: "password")
             
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                 if let e = error {
@@ -48,8 +63,12 @@ class LandingViewController: UIViewController {
             errorLabel.text = "Must enter password or email"
         }
         else {
+            let defaults = UserDefaults.standard
             let email = emailField.text!
             let password = passwordField.text!
+            
+            defaults.set(email, forKey: "email")
+            defaults.set(password, forKey: "password")
             
             Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
               guard let strongSelf = self else { return }
