@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		942EC153262DB920005EF4D4 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942EC152262DB920005EF4D4 /* LandingViewController.swift */; };
+		942EC15A262DBA33005EF4D4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942EC159262DBA33005EF4D4 /* HomeViewController.swift */; };
 		94CBEE74262D09C1001727F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CBEE73262D09C1001727F8 /* AppDelegate.swift */; };
 		94CBEE76262D09C1001727F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CBEE75262D09C1001727F8 /* SceneDelegate.swift */; };
 		94CBEE7B262D09C1001727F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94CBEE79262D09C1001727F8 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		0B04ADB95B377D7456A5ACF4 /* Pods-Squad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Squad.debug.xcconfig"; path = "Target Support Files/Pods-Squad/Pods-Squad.debug.xcconfig"; sourceTree = "<group>"; };
 		942EC152262DB920005EF4D4 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
+		942EC159262DBA33005EF4D4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		94CBEE70262D09C1001727F8 /* Squad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Squad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94CBEE73262D09C1001727F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94CBEE75262D09C1001727F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		942EC15E262DBA76005EF4D4 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				942EC159262DBA33005EF4D4 /* HomeViewController.swift */,
+				942EC152262DB920005EF4D4 /* LandingViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
 		94CBEE67262D09C1001727F8 = {
 			isa = PBXGroup;
 			children = (
@@ -86,9 +97,9 @@
 		94CBEE72262D09C1001727F8 /* Squad */ = {
 			isa = PBXGroup;
 			children = (
+				942EC15E262DBA76005EF4D4 /* View Controllers */,
 				94CBEE73262D09C1001727F8 /* AppDelegate.swift */,
 				94CBEE75262D09C1001727F8 /* SceneDelegate.swift */,
-				942EC152262DB920005EF4D4 /* LandingViewController.swift */,
 				94CBEE79262D09C1001727F8 /* Main.storyboard */,
 				94CBEE7F262D09C2001727F8 /* Assets.xcassets */,
 				94CBEE81262D09C2001727F8 /* LaunchScreen.storyboard */,
@@ -224,6 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				942EC15A262DBA33005EF4D4 /* HomeViewController.swift in Sources */,
 				94CBEE7E262D09C1001727F8 /* Squad.xcdatamodeld in Sources */,
 				94CBEE74262D09C1001727F8 /* AppDelegate.swift in Sources */,
 				942EC153262DB920005EF4D4 /* LandingViewController.swift in Sources */,

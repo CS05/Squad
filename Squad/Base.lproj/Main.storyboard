@@ -148,6 +148,7 @@
                         <outlet property="emailField" destination="zXB-Jh-4jq" id="twW-LP-uJW"/>
                         <outlet property="errorLabel" destination="7jh-AK-1Nj" id="L5J-Vv-Mfv"/>
                         <outlet property="passwordField" destination="ahT-kV-hao" id="XKY-2h-7P9"/>
+                        <segue destination="HKF-ze-dME" kind="show" identifier="LandingToHome" id="U4T-VR-4gr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A4W-Mj-5t5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -164,6 +165,7 @@
                         <viewLayoutGuide key="safeArea" id="ilG-K0-Cb3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="stQ-OO-42y"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7jV-tk-z2h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
