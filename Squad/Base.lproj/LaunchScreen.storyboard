@@ -51,7 +51,7 @@
         <image name="Logo" width="326" height="324"/>
         <image name="LogoText" width="830" height="296.5"/>
         <namedColor name="AppOrange">
-            <color red="0.99607843137254903" green="0.25098039215686274" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.99599999189376831" green="0.25099998712539673" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

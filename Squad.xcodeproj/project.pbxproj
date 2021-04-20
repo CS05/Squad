@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		942EC153262DB920005EF4D4 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942EC152262DB920005EF4D4 /* LandingViewController.swift */; };
+		942EC153262DB920005EF4D4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942EC152262DB920005EF4D4 /* LoginViewController.swift */; };
 		942EC15A262DBA33005EF4D4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942EC159262DBA33005EF4D4 /* HomeViewController.swift */; };
 		94CBEE74262D09C1001727F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CBEE73262D09C1001727F8 /* AppDelegate.swift */; };
 		94CBEE76262D09C1001727F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CBEE75262D09C1001727F8 /* SceneDelegate.swift */; };
@@ -15,6 +15,7 @@
 		94CBEE7E262D09C1001727F8 /* Squad.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 94CBEE7C262D09C1001727F8 /* Squad.xcdatamodeld */; };
 		94CBEE80262D09C2001727F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94CBEE7F262D09C2001727F8 /* Assets.xcassets */; };
 		94CBEE83262D09C2001727F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94CBEE81262D09C2001727F8 /* LaunchScreen.storyboard */; };
+		94D60D28262E5A0900CB9157 /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D60D27262E5A0900CB9157 /* SidebarViewController.swift */; };
 		94F8D49A262D1E4B008BBADB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94F8D499262D1E4B008BBADB /* GoogleService-Info.plist */; };
 		94F8D4A0262D2716008BBADB /* SquadFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94F8D49F262D26F0008BBADB /* SquadFont.ttf */; };
 		CD4C91D02D685C53EA9045B2 /* Pods_Squad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8F877A7D528B15A7CC94958 /* Pods_Squad.framework */; };
@@ -22,7 +23,7 @@
 
 /* Begin PBXFileReference section */
 		0B04ADB95B377D7456A5ACF4 /* Pods-Squad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Squad.debug.xcconfig"; path = "Target Support Files/Pods-Squad/Pods-Squad.debug.xcconfig"; sourceTree = "<group>"; };
-		942EC152262DB920005EF4D4 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
+		942EC152262DB920005EF4D4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		942EC159262DBA33005EF4D4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		94CBEE70262D09C1001727F8 /* Squad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Squad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94CBEE73262D09C1001727F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +33,7 @@
 		94CBEE7F262D09C2001727F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94CBEE82262D09C2001727F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94CBEE84262D09C2001727F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94D60D27262E5A0900CB9157 /* SidebarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewController.swift; sourceTree = "<group>"; };
 		94F8D499262D1E4B008BBADB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		94F8D49F262D26F0008BBADB /* SquadFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SquadFont.ttf; sourceTree = "<group>"; };
 		AEBB6992F3B1A7EE38265383 /* Pods-Squad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Squad.release.xcconfig"; path = "Target Support Files/Pods-Squad/Pods-Squad.release.xcconfig"; sourceTree = "<group>"; };
@@ -70,8 +72,9 @@
 		942EC15E262DBA76005EF4D4 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				94D60D27262E5A0900CB9157 /* SidebarViewController.swift */,
 				942EC159262DBA33005EF4D4 /* HomeViewController.swift */,
-				942EC152262DB920005EF4D4 /* LandingViewController.swift */,
+				942EC152262DB920005EF4D4 /* LoginViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -236,9 +239,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				942EC15A262DBA33005EF4D4 /* HomeViewController.swift in Sources */,
+				94D60D28262E5A0900CB9157 /* SidebarViewController.swift in Sources */,
 				94CBEE7E262D09C1001727F8 /* Squad.xcdatamodeld in Sources */,
 				94CBEE74262D09C1001727F8 /* AppDelegate.swift in Sources */,
-				942EC153262DB920005EF4D4 /* LandingViewController.swift in Sources */,
+				942EC153262DB920005EF4D4 /* LoginViewController.swift in Sources */,
 				94CBEE76262D09C1001727F8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
