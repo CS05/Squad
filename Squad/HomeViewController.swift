@@ -23,6 +23,8 @@ class HomeViewController: UIViewController {
         print("Plus pressed")
     }
     
+    @IBAction func menuPressed(_ sender: Any) {
+    }
     
     
 }

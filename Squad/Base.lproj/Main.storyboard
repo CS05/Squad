@@ -14,10 +14,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Login View Controller-->
+        <!--LoginViewController-->
         <scene sceneID="vre-NN-JVk">
             <objects>
-                <viewController id="7iA-AM-aAl" customClass="LoginViewController" customModule="Squad" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="LoginViewController" storyboardIdentifier="LoginViewController" title="LoginViewController" id="7iA-AM-aAl" customClass="LoginViewController" customModule="Squad" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8de-0c-xpD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -254,11 +254,25 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qn4-fK-wwm">
+                                <rect key="frame" x="349" y="57" width="45" height="35.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Ms0-Fp-BEg"/>
+                                    <constraint firstAttribute="width" constant="45" id="eAq-Ya-Kud"/>
+                                </constraints>
+                                <color key="tintColor" name="AppDarkBlue"/>
+                                <state key="normal" backgroundImage="line.horizontal.3" catalog="system"/>
+                                <connections>
+                                    <action selector="menuPressed:" destination="HKF-ze-dME" eventType="touchUpInside" id="ps5-MZ-uz6"/>
+                                    <segue destination="MIe-2q-lNn" kind="presentation" id="LWB-79-PL6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ilG-K0-Cb3"/>
                         <color key="backgroundColor" name="AppOrange"/>
                         <constraints>
                             <constraint firstItem="OiX-OD-Fp3" firstAttribute="top" secondItem="UXA-ud-ypl" secondAttribute="bottom" constant="5" id="1Ra-xy-aJo"/>
+                            <constraint firstItem="ilG-K0-Cb3" firstAttribute="trailing" secondItem="qn4-fK-wwm" secondAttribute="trailing" constant="20" id="4uY-iF-z8x"/>
                             <constraint firstItem="OiX-OD-Fp3" firstAttribute="bottom" secondItem="ilG-K0-Cb3" secondAttribute="bottom" id="5jc-eg-wn8"/>
                             <constraint firstItem="UXA-ud-ypl" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ilG-K0-Cb3" secondAttribute="leading" id="6II-fg-B5Z"/>
                             <constraint firstItem="oXF-q4-Q9f" firstAttribute="top" secondItem="VIe-2O-471" secondAttribute="bottom" constant="15" id="9SK-IQ-1S0"/>
@@ -274,9 +288,11 @@
                             <constraint firstItem="oXF-q4-Q9f" firstAttribute="leading" secondItem="ilG-K0-Cb3" secondAttribute="leading" id="gjR-bE-akk"/>
                             <constraint firstItem="ilG-K0-Cb3" firstAttribute="trailing" secondItem="OiX-OD-Fp3" secondAttribute="trailing" constant="20" id="nTJ-xK-vNH"/>
                             <constraint firstItem="Ye8-mI-C8Z" firstAttribute="top" secondItem="oXF-q4-Q9f" secondAttribute="bottom" constant="5" id="pP0-TP-HDr"/>
+                            <constraint firstItem="qn4-fK-wwm" firstAttribute="top" secondItem="ilG-K0-Cb3" secondAttribute="top" constant="8" id="v6n-U6-TFo"/>
                             <constraint firstItem="VIe-2O-471" firstAttribute="leading" secondItem="ilG-K0-Cb3" secondAttribute="leading" constant="20" id="vBT-h1-7w3"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="8uV-BN-hQf"/>
                     <connections>
                         <outlet property="mapView" destination="sgr-SX-g7H" id="ktG-3A-hyW"/>
                         <outlet property="meetingsTableView" destination="OiX-OD-Fp3" id="PBq-gM-lc8"/>
@@ -286,26 +302,58 @@
             </objects>
             <point key="canvasLocation" x="2411.594202898551" y="66.964285714285708"/>
         </scene>
-        <!--Sidebar View Controller-->
-        <scene sceneID="ScN-pg-9dJ">
+        <!--Settings View Controller-->
+        <scene sceneID="bUB-gg-jWb">
             <objects>
-                <viewController title="Sidebar View Controller" id="yKw-lO-KAa" customClass="SidebarViewController" customModule="Squad" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="1GC-DW-rGR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <viewController title="Settings View Controller" id="MIe-2q-lNn" customClass="SettingsViewController" customModule="Squad" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4W2-aE-eTp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="evN-0g-QeE"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Options" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DnE-Nd-7Vd">
+                                <rect key="frame" x="20" y="20" width="136" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="136" id="4Lk-zg-YrC"/>
+                                    <constraint firstAttribute="height" constant="51" id="Pr4-81-avW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SourceSansPro-SemiBold" family="Source Sans Pro" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQF-HO-hwk">
+                                <rect key="frame" x="20" y="79" width="70" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="WFb-1h-m1O"/>
+                                    <constraint firstAttribute="height" constant="41" id="yw4-5W-nja"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SourceSansPro-SemiBold" family="Source Sans Pro" pointSize="23"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logoutPressed:" destination="MIe-2q-lNn" eventType="touchUpInside" id="NC9-ts-Y6o"/>
+                                    <segue destination="Cgl-4Y-dP2" kind="show" animates="NO" id="Alk-dS-9WO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="t2I-5Y-3fd"/>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DnE-Nd-7Vd" firstAttribute="leading" secondItem="t2I-5Y-3fd" secondAttribute="leading" constant="20" id="Cy3-Pl-Z9c"/>
+                            <constraint firstItem="iQF-HO-hwk" firstAttribute="leading" secondItem="t2I-5Y-3fd" secondAttribute="leading" constant="20" id="cOT-T4-1CY"/>
+                            <constraint firstItem="DnE-Nd-7Vd" firstAttribute="top" secondItem="t2I-5Y-3fd" secondAttribute="top" constant="20" id="fgi-jg-E8q"/>
+                            <constraint firstItem="iQF-HO-hwk" firstAttribute="top" secondItem="DnE-Nd-7Vd" secondAttribute="bottom" constant="8" id="jCT-dw-U1y"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="06k-m9-oJS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CD4-G9-Xi9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2412" y="-648"/>
+            <point key="canvasLocation" x="3162" y="-654"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7vd-N4-M1g">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Cgl-4Y-dP2" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" navigationBarHidden="YES" id="Cgl-4Y-dP2" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Jp9-bP-3D4"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rhh-ed-Vje">
                         <autoresizingMask key="autoresizingMask"/>
@@ -323,6 +371,7 @@
     <resources>
         <image name="Logo" width="326" height="324"/>
         <image name="LogoText" width="830" height="296.5"/>
+        <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <namedColor name="AppDarkBlue">
             <color red="0.070588235294117646" green="0.14117647058823529" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

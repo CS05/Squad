@@ -1,13 +1,14 @@
 //
-//  SidebarViewController.swift
+//  SettingsViewController.swift
 //  Squad
 //
-//  Created by Christian Stiker on 4/19/21.
+//  Created by Christian Stiker on 4/20/21.
 //
 
 import UIKit
+import FirebaseAuth
 
-class SidebarViewController: UIViewController {
+class SettingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,7 +16,17 @@ class SidebarViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func logoutPressed(_ sender: Any) {
+        
+            let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
 
+    }
+    
     /*
     // MARK: - Navigation
 
