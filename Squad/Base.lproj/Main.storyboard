@@ -189,7 +189,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oXF-q4-Q9f" userLabel="Map Encloser">
                                 <rect key="frame" x="0.0" y="119" width="414" height="374"/>
                                 <subviews>
-                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sgr-SX-g7H">
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sgr-SX-g7H">
                                         <rect key="frame" x="20" y="0.0" width="374" height="374"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="sgr-SX-g7H" secondAttribute="height" multiplier="1:1" id="0Tk-6c-ug8"/>
@@ -214,6 +214,15 @@
                                             <action selector="plusPressed:" destination="HKF-ze-dME" eventType="touchUpInside" id="YVY-lO-Y1o"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3W-zv-d0f">
+                                        <rect key="frame" x="30" y="10" width="30" height="29.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Lx3-uh-RtH"/>
+                                            <constraint firstAttribute="width" constant="30" id="qpa-xV-alJ"/>
+                                        </constraints>
+                                        <color key="tintColor" name="AppDarkBlue"/>
+                                        <state key="normal" backgroundImage="location.north.fill" catalog="system"/>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="sgr-SX-g7H" firstAttribute="top" secondItem="oXF-q4-Q9f" secondAttribute="top" id="5d1-BN-kEE"/>
@@ -222,9 +231,11 @@
                                     <constraint firstItem="sgr-SX-g7H" firstAttribute="leading" secondItem="oXF-q4-Q9f" secondAttribute="leading" constant="20" id="LOd-kX-XgT"/>
                                     <constraint firstItem="sgr-SX-g7H" firstAttribute="leading" secondItem="oXF-q4-Q9f" secondAttribute="leading" constant="20" id="Mac-Rd-ySx"/>
                                     <constraint firstAttribute="bottom" secondItem="sgr-SX-g7H" secondAttribute="bottom" id="ORH-xt-sn9"/>
+                                    <constraint firstItem="L3W-zv-d0f" firstAttribute="top" secondItem="oXF-q4-Q9f" secondAttribute="top" constant="10" id="U1N-Tx-GbZ"/>
                                     <constraint firstAttribute="trailing" secondItem="6yb-ED-Qm8" secondAttribute="trailing" constant="30" id="cqB-Zv-SWk"/>
                                     <constraint firstAttribute="trailing" secondItem="sgr-SX-g7H" secondAttribute="trailing" constant="20" id="ewf-Lw-deb"/>
                                     <constraint firstItem="6yb-ED-Qm8" firstAttribute="top" secondItem="oXF-q4-Q9f" secondAttribute="top" constant="10" id="geh-Ts-Lrg"/>
+                                    <constraint firstItem="L3W-zv-d0f" firstAttribute="leading" secondItem="oXF-q4-Q9f" secondAttribute="leading" constant="30" id="zbl-5V-ZNb"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OiX-OD-Fp3">
@@ -263,7 +274,6 @@
                                 <color key="tintColor" name="AppDarkBlue"/>
                                 <state key="normal" backgroundImage="line.horizontal.3" catalog="system"/>
                                 <connections>
-                                    <action selector="menuPressed:" destination="HKF-ze-dME" eventType="touchUpInside" id="ps5-MZ-uz6"/>
                                     <segue destination="MIe-2q-lNn" kind="presentation" id="LWB-79-PL6"/>
                                 </connections>
                             </button>
@@ -294,6 +304,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="8uV-BN-hQf"/>
                     <connections>
+                        <outlet property="centerButton" destination="L3W-zv-d0f" id="cRT-wS-7hc"/>
                         <outlet property="mapView" destination="sgr-SX-g7H" id="ktG-3A-hyW"/>
                         <outlet property="meetingsTableView" destination="OiX-OD-Fp3" id="PBq-gM-lc8"/>
                     </connections>
@@ -372,6 +383,7 @@
         <image name="Logo" width="326" height="324"/>
         <image name="LogoText" width="830" height="296.5"/>
         <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
+        <image name="location.north.fill" catalog="system" width="108" height="128"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <namedColor name="AppDarkBlue">
             <color red="0.070588235294117646" green="0.14117647058823529" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

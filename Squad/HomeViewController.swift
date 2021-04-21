@@ -7,24 +7,75 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var meetingsTableView: UITableView!
+    @IBOutlet weak var centerButton: UIButton!
+    
+    var centerLocation = false
+    
+    let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.locationManager.requestAlwaysAuthorization()
 
-        // Do any additional setup after loading the view.
+            // For use in foreground
+            self.locationManager.requestWhenInUseAuthorization()
+
+            if CLLocationManager.locationServicesEnabled() {
+                locationManager.delegate = self
+                locationManager.desiredAccuracy = kCLLocationAccuracyBest
+                locationManager.startUpdatingLocation()
+            }
+
+            mapView.delegate = self
+            mapView.mapType = .standard
+            mapView.isZoomEnabled = true
+            mapView.isScrollEnabled = true
+
+            if let coor = mapView.userLocation.location?.coordinate {
+                mapView.setCenter(coor, animated: true)
+            }
+        
+            addCenterFunc()
+    }
+    
+    func addCenterFunc() {
+        centerButton.addTarget(self, action: #selector(centerMapOnUserButtonClicked), for:.touchUpInside)
+    }
+    
+    
+    @objc func centerMapOnUserButtonClicked() {
+        let locValue:CLLocationCoordinate2D = locationManager.location!.coordinate
+        let span = MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
+        let region = MKCoordinateRegion(center: locValue, span: span)
+        mapView.setRegion(region, animated: true)
+        
     }
     
     @IBAction func plusPressed(_ sender: Any) {
         print("Plus pressed")
     }
     
-    @IBAction func menuPressed(_ sender: Any) {
-    }
     
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    
+        let userLocation:CLLocation = locations[0] as CLLocation
+        
+        locationManager.stopUpdatingLocation()
+        
+        let locValue:CLLocationCoordinate2D = manager.location!.coordinate
+        
+        mapView.mapType = MKMapType.standard
+
+        let span = MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
+        let region = MKCoordinateRegion(center: locValue, span: span)
+        mapView.setRegion(region, animated: true)
+        //centerMap(locValue)
+    }
     
 }

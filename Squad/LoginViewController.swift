@@ -23,7 +23,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
         if rememberPassword {
             let defaults = UserDefaults.standard
             if let email = defaults.string(forKey: "email"){
