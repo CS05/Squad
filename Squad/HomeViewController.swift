@@ -42,6 +42,8 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate,MKMapViewD
             }
         
             addCenterFunc()
+        
+        mapView.pointOfInterestFilter = .includingAll
     }
     
     func addCenterFunc() {
@@ -78,4 +80,11 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate,MKMapViewD
         //centerMap(locValue)
     }
     
-}
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "HomeToHangout"{
+                let vc = segue.destination as! HangoutViewController
+                vc.mapCenter = self.mapView.convert(mapView.center, toCoordinateFrom: mapView)
+            }
+        }
+    }
+

@@ -10,6 +10,7 @@
 		942910E1262F78A1003EDA34 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942910E0262F78A1003EDA34 /* SettingsViewController.swift */; };
 		942EC153262DB920005EF4D4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942EC152262DB920005EF4D4 /* LoginViewController.swift */; };
 		942EC15A262DBA33005EF4D4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942EC159262DBA33005EF4D4 /* HomeViewController.swift */; };
+		947C8EA9263115CF00941A0A /* HangoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947C8EA8263115CF00941A0A /* HangoutViewController.swift */; };
 		94CBEE74262D09C1001727F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CBEE73262D09C1001727F8 /* AppDelegate.swift */; };
 		94CBEE76262D09C1001727F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CBEE75262D09C1001727F8 /* SceneDelegate.swift */; };
 		94CBEE7B262D09C1001727F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94CBEE79262D09C1001727F8 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 		942910E0262F78A1003EDA34 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		942EC152262DB920005EF4D4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		942EC159262DBA33005EF4D4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		947C8EA8263115CF00941A0A /* HangoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HangoutViewController.swift; sourceTree = "<group>"; };
 		94CBEE70262D09C1001727F8 /* Squad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Squad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94CBEE73262D09C1001727F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94CBEE75262D09C1001727F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				942EC159262DBA33005EF4D4 /* HomeViewController.swift */,
 				942EC152262DB920005EF4D4 /* LoginViewController.swift */,
 				942910E0262F78A1003EDA34 /* SettingsViewController.swift */,
+				947C8EA8263115CF00941A0A /* HangoutViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -83,7 +86,6 @@
 			isa = PBXGroup;
 			children = (
 				94CBEE72262D09C1001727F8 /* Squad */,
-				94CBEE71262D09C1001727F8 /* Products */,
 				8EB87E3DDD762E9732E8BDF7 /* Pods */,
 				5BF2305FDDDBE364A5F228FC /* Frameworks */,
 			);
@@ -95,6 +97,7 @@
 				94CBEE70262D09C1001727F8 /* Squad.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		94CBEE72262D09C1001727F8 /* Squad */ = {
@@ -109,6 +112,7 @@
 				94CBEE84262D09C2001727F8 /* Info.plist */,
 				94F8D499262D1E4B008BBADB /* GoogleService-Info.plist */,
 				94CBEE7C262D09C1001727F8 /* Squad.xcdatamodeld */,
+				94CBEE71262D09C1001727F8 /* Products */,
 				94F8D49E262D26E5008BBADB /* fonts */,
 			);
 			path = Squad;
@@ -238,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				947C8EA9263115CF00941A0A /* HangoutViewController.swift in Sources */,
 				942EC15A262DBA33005EF4D4 /* HomeViewController.swift in Sources */,
 				94CBEE7E262D09C1001727F8 /* Squad.xcdatamodeld in Sources */,
 				94CBEE74262D09C1001727F8 /* AppDelegate.swift in Sources */,
