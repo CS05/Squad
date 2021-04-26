@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct Hangout {
-    var time: String
+struct HangoutLib {
+    static var hangouts: [String] = []
 }

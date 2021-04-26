@@ -11,7 +11,7 @@
 		942EC153262DB920005EF4D4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942EC152262DB920005EF4D4 /* LoginViewController.swift */; };
 		942EC15A262DBA33005EF4D4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942EC159262DBA33005EF4D4 /* HomeViewController.swift */; };
 		947C8EA9263115CF00941A0A /* HangoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947C8EA8263115CF00941A0A /* HangoutViewController.swift */; };
-		948BB5EB26363E6A00F6BB3A /* Hangout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948BB5EA26363E6A00F6BB3A /* Hangout.swift */; };
+		948BB5EB26363E6A00F6BB3A /* HangoutLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948BB5EA26363E6A00F6BB3A /* HangoutLib.swift */; };
 		94CBEE74262D09C1001727F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CBEE73262D09C1001727F8 /* AppDelegate.swift */; };
 		94CBEE76262D09C1001727F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CBEE75262D09C1001727F8 /* SceneDelegate.swift */; };
 		94CBEE7B262D09C1001727F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94CBEE79262D09C1001727F8 /* Main.storyboard */; };
@@ -29,7 +29,7 @@
 		942EC152262DB920005EF4D4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		942EC159262DBA33005EF4D4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		947C8EA8263115CF00941A0A /* HangoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HangoutViewController.swift; sourceTree = "<group>"; };
-		948BB5EA26363E6A00F6BB3A /* Hangout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hangout.swift; sourceTree = "<group>"; };
+		948BB5EA26363E6A00F6BB3A /* HangoutLib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HangoutLib.swift; sourceTree = "<group>"; };
 		94CBEE70262D09C1001727F8 /* Squad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Squad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94CBEE73262D09C1001727F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94CBEE75262D09C1001727F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 		94CBEE72262D09C1001727F8 /* Squad */ = {
 			isa = PBXGroup;
 			children = (
-				948BB5EA26363E6A00F6BB3A /* Hangout.swift */,
+				948BB5EA26363E6A00F6BB3A /* HangoutLib.swift */,
 				942EC15E262DBA76005EF4D4 /* View Controllers */,
 				94CBEE73262D09C1001727F8 /* AppDelegate.swift */,
 				94CBEE75262D09C1001727F8 /* SceneDelegate.swift */,
@@ -251,7 +251,7 @@
 				94CBEE74262D09C1001727F8 /* AppDelegate.swift in Sources */,
 				942EC153262DB920005EF4D4 /* LoginViewController.swift in Sources */,
 				94CBEE76262D09C1001727F8 /* SceneDelegate.swift in Sources */,
-				948BB5EB26363E6A00F6BB3A /* Hangout.swift in Sources */,
+				948BB5EB26363E6A00F6BB3A /* HangoutLib.swift in Sources */,
 				942910E1262F78A1003EDA34 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

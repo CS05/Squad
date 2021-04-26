@@ -60,7 +60,7 @@ class HangoutViewController: UIViewController, CLLocationManagerDelegate,MKMapVi
         
         datePicker.addTarget(self, action: #selector(HangoutViewController.handler(sender:)), for: UIControl.Event.valueChanged)
         
-        numberPickerData = ["1", "5", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55", "60"]
+        numberPickerData = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59"]
         
         formatPickerData = ["minute(s)", "hour(s)"]
         
@@ -104,16 +104,20 @@ class HangoutViewController: UIViewController, CLLocationManagerDelegate,MKMapVi
           
       }
     
+    var strDate = ""
     
     @objc func handler(sender: UIDatePicker) {
         let timeFormatter = DateFormatter()
         timeFormatter.timeStyle = DateFormatter.Style.short
         timeFormatter.dateStyle = DateFormatter.Style.short
 
-        var strDate = timeFormatter.string(from: datePicker.date)
-        print(strDate)
+        strDate = timeFormatter.string(from: datePicker.date)
         // do what you want to do with the string.
     }
     
+    @IBAction func sendPressed(_ sender: Any) {
+        HangoutLib.hangouts.append("Hangout at \(strDate)")
+        self.dismiss(animated: true, completion: nil)
+    }
     
 }

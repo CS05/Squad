@@ -98,7 +98,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate,MKMapViewD
     
 //MARK: Table View
     
-    let hangouts: [String] = []
+    var hangouts = HangoutLib.hangouts
         
         // cell reuse id (cells that scroll out of view can be reused)
         let cellReuseIdentifier = "cell"
