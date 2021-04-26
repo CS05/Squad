@@ -6,7 +6,7 @@ target 'Squad' do
   use_frameworks!
 
   # Pods for Squad
-	pod 'IQKeyboardManagerSwift'
+  
 	pod 'Firebase/Auth'
 	pod 'Firebase/Firestore'
 	
