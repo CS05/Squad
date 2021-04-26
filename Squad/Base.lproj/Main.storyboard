@@ -88,7 +88,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Warning: this app is in very early development!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fcb-L9-RRr">
-                                <rect key="frame" x="18.333333333333343" y="775" width="353.66666666666663" height="20"/>
+                                <rect key="frame" x="24.333333333333343" y="773.33333333333337" width="341.66666666666663" height="21.666666666666629"/>
                                 <fontDescription key="fontDescription" name="SourceSansPro-SemiBold" family="Source Sans Pro" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <color key="highlightedColor" name="AppMediumBlue"/>
@@ -258,7 +258,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXA-ud-ypl">
-                                <rect key="frame" x="20.000000000000007" y="585.66666666666663" width="127.66666666666669" height="30.333333333333371"/>
+                                <rect key="frame" x="20" y="583" width="139" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="UXA-ud-ypl" secondAttribute="height" multiplier="139:33" id="sPS-A8-niV"/>
                                 </constraints>
@@ -276,6 +276,14 @@
                                 <state key="normal" backgroundImage="line.horizontal.3" catalog="system"/>
                                 <connections>
                                     <segue destination="MIe-2q-lNn" kind="presentation" id="LWB-79-PL6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MhD-7j-K2o">
+                                <rect key="frame" x="332" y="587" width="38" height="34"/>
+                                <fontDescription key="fontDescription" name="SourceSansPro-SemiBold" family="Source Sans Pro" pointSize="17"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clearPressed:" destination="HKF-ze-dME" eventType="touchUpInside" id="1c3-sx-qss"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -296,9 +304,11 @@
                             <constraint firstItem="UXA-ud-ypl" firstAttribute="leading" secondItem="ilG-K0-Cb3" secondAttribute="leading" constant="20" id="bzE-Yr-wmS"/>
                             <constraint firstItem="ilG-K0-Cb3" firstAttribute="trailing" secondItem="OiX-OD-Fp3" secondAttribute="trailing" constant="20" id="f9r-rU-eU1"/>
                             <constraint firstItem="OiX-OD-Fp3" firstAttribute="bottom" secondItem="ilG-K0-Cb3" secondAttribute="bottom" id="fit-qQ-T1U"/>
+                            <constraint firstItem="OiX-OD-Fp3" firstAttribute="top" secondItem="MhD-7j-K2o" secondAttribute="bottom" id="fnQ-Ob-xhf"/>
                             <constraint firstItem="oXF-q4-Q9f" firstAttribute="leading" secondItem="ilG-K0-Cb3" secondAttribute="leading" id="gjR-bE-akk"/>
                             <constraint firstItem="ilG-K0-Cb3" firstAttribute="trailing" secondItem="OiX-OD-Fp3" secondAttribute="trailing" constant="20" id="nTJ-xK-vNH"/>
                             <constraint firstItem="Ye8-mI-C8Z" firstAttribute="top" secondItem="oXF-q4-Q9f" secondAttribute="bottom" constant="5" id="pP0-TP-HDr"/>
+                            <constraint firstItem="ilG-K0-Cb3" firstAttribute="trailing" secondItem="MhD-7j-K2o" secondAttribute="trailing" constant="20" id="tl0-WL-fTe"/>
                             <constraint firstItem="qn4-fK-wwm" firstAttribute="top" secondItem="ilG-K0-Cb3" secondAttribute="top" constant="8" id="v6n-U6-TFo"/>
                             <constraint firstItem="VIe-2O-471" firstAttribute="leading" secondItem="ilG-K0-Cb3" secondAttribute="leading" constant="20" id="vBT-h1-7w3"/>
                         </constraints>
@@ -324,12 +334,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="New Hangout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nTU-BO-92S">
-                                <rect key="frame" x="20" y="20.000000000000004" width="184" height="40.333333333333343"/>
+                                <rect key="frame" x="20" y="20.000000000000004" width="174.66666666666666" height="38.333333333333343"/>
                                 <fontDescription key="fontDescription" name="SourceSansPro-SemiBold" family="Source Sans Pro" pointSize="30"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="O0u-Se-4oH">
-                                <rect key="frame" x="20" y="65.333333333333329" width="350" height="198.33333333333337"/>
+                                <rect key="frame" x="20" y="63.333333333333329" width="350" height="198.33333333333337"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="O0u-Se-4oH" secondAttribute="height" multiplier="187:106" id="i2D-37-8yH"/>
                                 </constraints>
@@ -340,7 +350,7 @@
                                 </userDefinedRuntimeAttributes>
                             </mapView>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="5" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="M4R-J7-YdE">
-                                <rect key="frame" x="20" y="268.66666666666669" width="350" height="112.33333333333331"/>
+                                <rect key="frame" x="20" y="266.66666666666669" width="350" height="112.33333333333331"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="M4R-J7-YdE" secondAttribute="height" multiplier="187:60" id="Um3-d1-Vvg"/>
                                 </constraints>
@@ -535,13 +545,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Invite Friends" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8iY-Av-0y5">
-                                <rect key="frame" x="20.000000000000007" y="392" width="119.66666666666669" height="23.333333333333314"/>
+                                <rect key="frame" x="20" y="390" width="117" height="25.333333333333314"/>
                                 <fontDescription key="fontDescription" name="SourceSansPro-SemiBold" family="Source Sans Pro" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How long?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QaX-BW-87L">
-                                <rect key="frame" x="19.999999999999993" y="554.66666666666663" width="96.333333333333314" height="23.666666666666629"/>
+                                <rect key="frame" x="19.999999999999993" y="554.66666666666663" width="89.333333333333314" height="23.666666666666629"/>
                                 <fontDescription key="fontDescription" name="SourceSansPro-SemiBold" family="Source Sans Pro" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

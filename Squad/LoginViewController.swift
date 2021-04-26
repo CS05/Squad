@@ -17,10 +17,6 @@ class LoginViewController: UIViewController {
     
     let rememberPassword = true
     
-    @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {
-
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)

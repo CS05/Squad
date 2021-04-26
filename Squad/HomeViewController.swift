@@ -22,6 +22,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate,MKMapViewD
     let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
+        let defaults = UserDefaults.standard
         super.viewDidLoad()
         self.locationManager.requestAlwaysAuthorization()
 
@@ -51,6 +52,13 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate,MKMapViewD
         tableView.dataSource = self
         
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
+        
+        if let hangoutArray = defaults.stringArray(forKey: "hangouts") {
+            HangoutLib.hangouts = hangoutArray
+        }
+        
+        var refreshTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(refreshData), userInfo: nil, repeats: true)
+
     }
     
     func addCenterFunc() {
@@ -95,10 +103,22 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate,MKMapViewD
             }
         }
     
+    @IBAction func clearPressed(_ sender: Any) {
+        let defaults = UserDefaults.standard
+        defaults.removeObject(forKey: "hangouts")
+        HangoutLib.hangouts = []
+    }
+    
     
 //MARK: Table View
     
     var hangouts = HangoutLib.hangouts
+    
+    @objc func refreshData(){
+        hangouts = HangoutLib.hangouts
+        tableView.reloadData()
+    }
+    
         
         // cell reuse id (cells that scroll out of view can be reused)
         let cellReuseIdentifier = "cell"
@@ -121,9 +141,6 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate,MKMapViewD
         }
         
         // method to run when table view cell is tapped
-        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            print("You tapped cell number \(indexPath.row).")
-        }
     
     }
 

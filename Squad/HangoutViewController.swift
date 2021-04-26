@@ -46,6 +46,8 @@ class HangoutViewController: UIViewController, CLLocationManagerDelegate,MKMapVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        handler(sender: datePicker)
+        
         mapView.mapType = .standard
         mapView.pointOfInterestFilter = .includingAll
         
@@ -116,8 +118,16 @@ class HangoutViewController: UIViewController, CLLocationManagerDelegate,MKMapVi
     }
     
     @IBAction func sendPressed(_ sender: Any) {
+        let defaults = UserDefaults.standard
         HangoutLib.hangouts.append("Hangout at \(strDate)")
+        if defaults.object(forKey: "hangouts") == nil {
+            defaults.set(HangoutLib.hangouts, forKey: "hangouts")
+        } else {
+            defaults.removeObject(forKey: "hangouts")
+            defaults.set(HangoutLib.hangouts, forKey: "hangouts")
+        }
         self.dismiss(animated: true, completion: nil)
+        print(HangoutLib.hangouts)
     }
     
 }
